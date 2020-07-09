@@ -1,0 +1,21 @@
+﻿@model IEnumerable<ContactViewModel>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<a asp-action="Create">Create</a>
+
+@foreach (var item in Model)
+{
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="@item.ImagePath" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title"> @item.FullName</h5>
+            <p class="card-text"> @item.PhoneNumber</p>
+            <a href="#" class="btn btn-primary">Edit</a>
+        </div>
+    </div>
+   
+}
